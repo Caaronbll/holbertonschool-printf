@@ -12,6 +12,12 @@
  *
  *
  * */
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
+
+	test f_list[] = {
+		{"c", print_char}
+		{"s", print_string}
+		{"%", print_percent}
+	};
 
 #endif
