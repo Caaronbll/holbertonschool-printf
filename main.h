@@ -12,12 +12,16 @@
  *
  *
  * */
-int _printf(const char *format, ...)
 
-	test f_list[] = {
-		{"c", print_char}
-		{"s", print_string}
-		{"%", print_percent}
-	};
+struct spec_sym
+{
+	char *sym
+	int (*f)(va_list);
+};
+
+typedef struct spec_sym symbol;
+
+
+
 
 #endif
