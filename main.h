@@ -13,13 +13,12 @@
  *
  * */
 
-struct spec_sym
+typedef struct specstr
 {
-	char *sym
+	char *symbol
 	int (*f)(va_list);
 };
 
-typedef struct spec_sym symbol;
 
 
 

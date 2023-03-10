@@ -14,11 +14,22 @@
  * */
 int _printf(const char *format, ...)
 {
+	int pf_out;
 
-	symbol sym_list[] = {
-		{"c", print_char},
-		{"s", print string},
+	if (!format)
+		return();
+
+	strucstr func_list[] = {
+		{"c", print_character},
+		{"s", print_string},
 		{"%", print_percent},
 		{NULL, NULL}
 	};
+	
+	va_list arg_list;
+	va_start(arg_list, format);
+	pf_out = printer(format, func_list[], arg_list);
+
+	va_end(arg_list);
+	return(pf_out);
 }
