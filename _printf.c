@@ -5,19 +5,16 @@
 
 /* _printf - Recieves the main string and all parameters to print
  *  a formatted string.
- *  It returns an integer and takes a first parameter of a pointer to a constant character an
- *  d a number of following parameters
- *  If you happen to pass in more parameters than are required by the format string you pass
- *  in, then the extra parameters are ignored
- *
- *
- * */
+ *  @format: selected string to print as the output.
+ *  Return: Printed string.
+ */
+
 int _printf(const char *format, ...)
 {
 	int pf_out;
 
 	if (!format)
-		return();
+		return(-1);
 
 	strucstr func_list[] = {
 		{"c", print_character},
@@ -28,7 +25,7 @@ int _printf(const char *format, ...)
 	
 	va_list arg_list;
 	va_start(arg_list, format);
-	pf_out = printer(format, func_list[], arg_list);
+	pf_out = printer(format, func_list, arg_list);
 
 	va_end(arg_list);
 	return(pf_out);
