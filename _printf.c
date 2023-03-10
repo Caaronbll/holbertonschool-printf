@@ -35,7 +35,6 @@ int _printf(const char *format, ...)
 				//do code for percent sign
 			}
 		}
-		p++;
-	}
+	_putchar(p);
+	p++;	
 }
-
