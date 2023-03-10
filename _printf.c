@@ -11,22 +11,31 @@
 
 int _printf(const char *format, ...)
 {
-	int pf_out;
+	int count = 0;
+	const char *p = format;
 
-	if (!format)
-		return(-1);
+	va_list args;
+	va_start(args, format);
 
-	strucstr func_list[] = {
-		{"c", print_character},
-		{"s", print_string},
-		{"%", print_percent},
-		{NULL, NULL}
-	};
-	
-	va_list arg_list;
-	va_start(arg_list, format);
-	pf_out = printer(format, func_list, arg_list);
-
-	va_end(arg_list);
-	return(pf_out);
+	while(*p)
+	{
+		if(*p == '%')
+		{
+			p++;
+			if(*p == 'c')
+			{
+				//do code for the character
+			}
+			else if (*p == 's')
+			{
+				//do code for string
+			}
+			else if (*p == '%')
+			{
+				//do code for percent sign
+			}
+		}
+		p++;
+	}
 }
+
