@@ -14,6 +14,10 @@
  * */
 int _printf(const char *format, ...)
 {
+	int pf_out;
+
+	if (!format)
+		return (-1);
 
 	symbol sym_list[] = {
 		{"c", print_char},
