@@ -15,7 +15,7 @@ typedef struct spectr
 {
 	char *letter;
 	int (*f)(va_list);
-} spec_tr;
+} spectr_t;
 
 /*prototypes*/
 
