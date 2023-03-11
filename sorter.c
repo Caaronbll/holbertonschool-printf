@@ -16,4 +16,35 @@ int sorter(const char *format, spectr_t functions[], va_list arguments)
 	{
 		if (format[i] == '%')
 		{
-			for (int j = 0; functions[j].letter
+			for (int j = 0; functions[j].letter; j++)
+			{
+				if (format[i + 1] == functions[j].letter[0])
+				{
+					marker = functions[j].f(arguments);
+					if (marker == -1)
+						return (-1);
+					count = count + marker;
+					break;
+				}
+			}
+			if (!functions[j].letter && format[i + 1] != ' ')
+			{
+				if (format[i + 1] != '\0')
+				{
+					_putchar(format[i]);
+					_putchar(format[i + 1]);
+					count = count + 2;
+				}
+				else
+					return (-1);
+			}
+			i = i + 1;
+		}
+		else
+		{
+			_putchar(format[i]);
+			count++;
+		}
+	}
+	return (count);
+}
