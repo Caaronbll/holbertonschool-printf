@@ -8,7 +8,7 @@
  * Return: total count of characters
  */
 
-int sorter(const char *format, specs_tr functions[], va_list arguments)
+int sorter(const char *format, spectr_t functions[], va_list arguments)
 {
 	int count = 0;
 
