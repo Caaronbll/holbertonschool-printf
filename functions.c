@@ -42,3 +42,11 @@ int print_percent(__attribute__((unused)) va_list list)
 	_putchar('%');
 	return (1);
 }
+
+int print_int(va_list list)
+{
+	int num_length;
+
+	num_length = print_number(list);
+	return (num_length);
+}
