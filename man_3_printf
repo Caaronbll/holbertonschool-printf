@@ -33,6 +33,5 @@ The _printf function returns the total number of characters written to the stand
 
 .SH EXAMPLES
 Here are some examples of how to use the _printf function:
-
-.SH SEE ALSO
-
+- _printf("Example of text") - "Example of text"
+- _printf("Example of text with a %s and a %d", char_variable, int_variable) - "Example of text with a string input and a integer input"
