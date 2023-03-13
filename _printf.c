@@ -16,9 +16,9 @@ int _printf(const char *format, ...)
 	if (!format)
 		return (-1);
 
-	spectr_t functions[] = {
+	spec_tr functions[] = {
 		{"s", print_string},
-		{"c", print_char},
+		{"c", print_character},
 		{"%", print_percent},
 		{NULL, NULL}
 	};

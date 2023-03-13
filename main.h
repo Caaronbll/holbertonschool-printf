@@ -15,11 +15,15 @@ typedef struct spectr
 {
 	char *letter;
 	int (*f)(va_list);
-} spectr_t;
+} spec_tr;
 
 /*prototypes*/
 
 int _printf(const char *format, ...);
 int printer(const char *format, spec_tr functions[], va_list arguments);
-
+int _putchar(char c);
+int print_character(va_list list);
+int print_string(va_list list);
+int print_percent(__attribute__((unused))va_list list);
+int sorter(const char *format, spec_tr functions[], va_list arguments);
 #endif

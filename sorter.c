@@ -8,15 +8,16 @@
  * Return: total count of characters
  */
 
-int sorter(const char *format, spectr_t functions[], va_list arguments)
+int sorter(const char *format, spec_tr functions[], va_list arguments)
 {
 	int count = 0;
+	int marker, i, j;
 
-	for (int i = 0; format[i]; i++)
+	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
-			for (int j = 0; functions[j].letter; j++)
+			for (j = 0; functions[j].letter; j++)
 			{
 				if (format[i + 1] == functions[j].letter[0])
 				{
