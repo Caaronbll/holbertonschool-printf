@@ -1,0 +1,38 @@
+.TH man 3 "13 March 2023" "_printf manual"
+
+.SH NAME
+.B _printf
+- A simplified recreation of the popular printf function
+
+.SH SYNOPSIS
+In order to use this function the #include "main.h" header is necessary.
+<stdlib.h>, <stdio.h>, <inistd.h> and <stdarg.h> are included in "main.h".
+
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The _printf function is a formatted output conversion function that writes the formatted
+output to the standard output stream.
+
+The function takes a format string and a variable number of arguments,
+the string and arguments are then interpreted by the conversion specifiers [c,s,%,d,i]
+in the format string.
+The function then writes the new string to the standard output stream.
+
+The conversion specifiers for the _printf function include:
+
+- %c: prints a single character
+- %s: prints a single string
+- %%: prints a percent sign
+- %d: prints an integer with a signed decimal
+- %i: prints an integer with a signed decimal
+
+
+.SH RETURN VALUE
+The _printf function returns the total number of characters written to the standard output stream, or a negative value if an error is encountered.
+
+.SH EXAMPLES
+Here are some examples of how to use the _printf function:
+
+.SH SEE ALSO
+
