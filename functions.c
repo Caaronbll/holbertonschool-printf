@@ -2,7 +2,7 @@
 
 /**
  * print_character - Prints a single character
- * @list: Argument list
+ * @list: va_list
  *
  * Return: Number of characters printed (always 1)
  */
@@ -14,7 +14,7 @@ int print_character(va_list list)
 
 /**
  * print_string - Prints a string
- * @list: Argument list
+ * @list: argument list
  *
  * Return: Number of characters printed
  */
