@@ -12,9 +12,6 @@
 int _printf(const char *format, ...)
 {
 	int pf_out;
-	
-	if (!format)
-		return (-1);
 
 	spec_tr functions[] = {
 		{"s", print_string},
@@ -24,6 +21,8 @@ int _printf(const char *format, ...)
 	};
 	va_list arguments;
 
+	if (!format)
+		return (-1);
 	va_start(arguments, format);
 	pf_out = sorter(format, functions, arguments);
 	va_end(arguments);
