@@ -28,5 +28,5 @@ int print_character(va_list list);
 int print_string(va_list list);
 int print_percent(__attribute__((unused))va_list list);
 int sorter(const char *format, spec_tr functions[], va_list arguments);
-
+int print_int(va_list list)
 #endif
