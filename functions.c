@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_character - Prints a single character
+ * @list: Argument list
+ *
+ * Return: Number of characters printed (always 1)
+ */
 int print_character(va_list list)
 {
 	_putchar(va_arg(list, int));
@@ -7,11 +13,11 @@ int print_character(va_list list)
 }
 
 /**
- * print_string - prints the string
- * @list: argument list
- * Return: characters printed
+ * print_string - Prints a string
+ * @list: Argument list
+ *
+ * Return: Number of characters printed
  */
-
 int print_string(va_list list)
 {
 	int i;
@@ -26,13 +32,13 @@ int print_string(va_list list)
 }
 
 /**
- * print_percent - prints theliteral percentage
+ * print_percent - Prints a literal percentage
+ * @list: Argument list (unused)
  *
- *
+ * Return: Number of characters printed (always 1)
  */
-int print_percent(__attribute__((unused))va_list list)
+int print_percent(__attribute__((unused)) va_list list)
 {
 	_putchar('%');
 	return (1);
 }
-
