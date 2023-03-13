@@ -3,7 +3,8 @@
 #include <stdarg.h>
 
 
-/* _printf - Recieves the main string and all parameters to print
+/**
+ * _printf - Recieves the main string and all parameters to print
  *  a formatted string.
  *  @format: selected string to print as the output.
  *  Return: Printed string.
