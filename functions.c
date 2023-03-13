@@ -25,6 +25,11 @@ int print_string(va_list list)
 	return (i);
 }
 
+/**
+ * print_percent - prints theliteral percentage
+ *
+ *
+ */
 int print_percent(__attribute__((unused))va_list list)
 {
 	_putchar('%');
